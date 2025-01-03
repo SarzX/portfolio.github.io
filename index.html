@@ -518,6 +518,26 @@
 	  </script>
 	<img src="images/wood.png" style="display: none;">
 
+<script>if (window.Telegram.WebApp) {
+    Telegram.WebApp.expand();  // Расширяем WebApp на весь экран
+    adjustLayout();  // Дополнительная настройка дизайна на основе размера экрана
+}
 
+function adjustLayout() {
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+
+    // Изменение стилей в зависимости от размера окна
+    if (width < 768) {
+        // Для мобильных устройств
+        document.body.style.fontSize = '14px';
+    } else {
+        // Для десктопных версий
+        document.body.style.fontSize = '16px';
+    }
+}
+
+window.addEventListener('resize', adjustLayout);  // Обработка изменений размера окна
+</script>
 
 </body></html>
